@@ -9,28 +9,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  background: #2c98f0;
+  text-align: center;
+  margin: 20px;
 }
 
 .App-header > h1 {
-  color: white;
+  color: #fe6b8b;
   font-size: 2.8rem;
-  font-weight: 400;
   margin-bottom: 0px;
+  background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .App-header > h3 {
-  color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
-}
-
-.App-header-title {
-  text-align: center;
-  text-decoration: none;
-  font-size: 4rem;
 }
 
 @media (max-device-width: 600px) {
@@ -70,4 +67,16 @@
   flex-direction: column;
   width: 100%;
   max-width: 640px;
+}
+
+/* 
+  I'm applying here the ink color since the `classes` prop is not avialable
+  on MUI reason binding yet 
+*/
+.TextField-inputwrapper:after {
+  background-color: #fe6b8b !important;
+}
+
+.TextField-focused {
+  color: #fe6b8b !important;
 }

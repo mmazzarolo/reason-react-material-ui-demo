@@ -1,23 +1,26 @@
 body {
   margin: 0;
   padding: 0;
-  font-weight: 400;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: Roboto, sans-serif;
 }
 
-html,
-body {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-}
-
-p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-h7 {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+h6 {
+  text-rendering: optimizelegibility;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-smoothing: antialiased;
+  color: #868686;
 }

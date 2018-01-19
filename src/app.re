@@ -94,8 +94,11 @@ let make = _children => {
       <div className="App-root">
         <header className="App-header">
           <h1>
-            (ReasonReact.stringToElement("Reason React with Material UI"))
+            (ReasonReact.stringToElement("Reason React"))
+            <br />
+            (ReasonReact.stringToElement("Material UI"))
           </h1>
+          <div className="App-header-separator" />
           <h3>
             (
               ReasonReact.stringToElement(
@@ -106,11 +109,14 @@ let make = _children => {
         </header>
         <main>
           <form className="App-form" autoComplete="off">
-            <TextField
-              label="Name"
-              value=(`String(state.name))
-              onChange=(reduce(e => ChangeName(valueFromEvent(e))))
-            />
+            <FormControl className="TextField">
+              <InputLabel
+                _FormControlClasses={"focused": "TextField-focused"}
+                htmlFor="custom-color-input">
+                (ReasonReact.stringToElement("asdfasdf UI"))
+              </InputLabel>
+              <Input className="TextField-inputwrapper" />
+            </FormControl>
             <TextField
               label="Players"
               value=(`Int(state.players))
