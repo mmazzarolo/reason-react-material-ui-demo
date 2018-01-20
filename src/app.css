@@ -68,15 +68,3 @@
   width: 100%;
   max-width: 640px;
 }
-
-/* 
-  I'm applying here the ink color since the `classes` prop is not avialable
-  on MUI reason binding yet 
-*/
-.TextField-inputwrapper:after {
-  background-color: #fe6b8b !important;
-}
-
-.TextField-focused {
-  color: #fe6b8b !important;
-}
