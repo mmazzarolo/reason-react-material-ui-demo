@@ -31,7 +31,7 @@ type platform = {
   label: string
 };
 
-let platforms: list(platform) = [
+let platforms: list(SelectA.option) = [
   {value: "steam", label: "Steam"},
   {value: "wii", label: "Nintendo Wii"},
   {value: "wiiu", label: "Nintendo Wii U"},
@@ -77,19 +77,19 @@ let make = _children => {
     | ChangeNotes(notes) => ReasonReact.Update({...state, notes})
     | ChangeAuthor(author) => ReasonReact.Update({...state, author})
     },
-  render: ({state, reduce}) => {
-    let platformOptions =
-      ReasonReact.arrayToElement(
-        Array.of_list(
-          List.map(
-            platform =>
-              <option value=platform.value>
-                (ReasonReact.stringToElement(platform.label))
-              </option>,
-            platforms
-          )
-        )
-      );
+  render: ({state, reduce}) =>
+    /* let platformOptions =
+       ReasonReact.arrayToElement(
+         Array.of_list(
+           List.map(
+             platform =>
+               <option value=platform.value>
+                 (ReasonReact.stringToElement(platform.label))
+               </option>,
+             platforms
+           )
+         )
+       ); */
     MaterialUI.(
       <div className="App-root">
         <header className="App-header">
@@ -109,6 +109,11 @@ let make = _children => {
         </header>
         <main>
           <form className="App-form" autoComplete="off">
+            <TextFieldA
+              label="Name"
+              value=state.name
+              onChange=(reduce(e => ChangeName(e)))
+            />
             <FormControl className="TextField">
               <InputLabel
                 _FormControlClasses={"focused": "TextField-focused"}
@@ -125,18 +130,12 @@ let make = _children => {
               )
               _type="number"
             />
-            <FormControl>
-              <InputLabel htmlFor="platform">
-                (ReasonReact.stringToElement("age"))
-              </InputLabel>
-              <Select
-                native=true
-                value=(`String(state.platform))
-                input=<Input id="platform" />
-                onChange=(reduce(e => ChangePlatform(valueFromEvent(e))))>
-                platformOptions
-              </Select>
-            </FormControl>
+            <SelectA
+              label="platform"
+              value=state.platform
+              data=platforms
+              onChange=(reduce(e => ChangePlatform(e)))
+            />
             <TextField
               label="Genre"
               value=(`String(state.genre))
@@ -170,6 +169,5 @@ let make = _children => {
           </form>
         </main>
       </div>
-    );
-  }
+    )
 };

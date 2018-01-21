@@ -1,28 +1,26 @@
 [%bs.raw {|require('./TextField.css')|}];
 
-type props = {
-  value: string,
-  onChange: (string) => 
-};
 let valueFromEvent = evt : string => (
                                        evt
                                        |> ReactEventRe.Form.target
                                        |> ReactDOMRe.domElementToObj
                                      )##value;
 
-let component = ReasonReact.reducerComponent("TextField");
+let component = ReasonReact.statelessComponent("TextFieldA");
 
-let make = (~value, ~onChange, _children) => {
+let make = (~label, ~value, ~onChange, _children) => {
   ...component,
   render: _self =>
     MaterialUI.(
       <FormControl className="TextField">
-        <InputLabel
-          _FormControlClasses={"focused": "TextField-focused"}
-          htmlFor="custom-color-input">
-          (ReasonReact.stringToElement(value))
+        <InputLabel _FormControlClasses={"focused": "TextField-focused"}>
+          (ReasonReact.stringToElement(label))
         </InputLabel>
-        <Input className="TextField-inputwrapper" />
+        <Input
+          className="TextField-inputwrapper"
+          value
+          onChange=(e => onChange(valueFromEvent(e)))
+        />
       </FormControl>
     )
 };
