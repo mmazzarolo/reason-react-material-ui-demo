@@ -1,6 +1,11 @@
 {
   "name": "reason-scripts",
-  "sources": ["src"],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
   "bs-dependencies": ["reason-react", "bs-jest", "bs-material-ui"],
   "reason": {
     "react-jsx": 2

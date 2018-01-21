@@ -6,7 +6,7 @@ let valueFromEvent = evt : string => (
                                        |> ReactDOMRe.domElementToObj
                                      )##value;
 
-let component = ReasonReact.statelessComponent("TextFieldA");
+let component = ReasonReact.statelessComponent("TextField");
 
 let make = (~label, ~value, ~onChange, _children) => {
   ...component,

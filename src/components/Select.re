@@ -6,7 +6,7 @@ let valueFromEvent = evt : string => (
                                        |> ReactDOMRe.domElementToObj
                                      )##value;
 
-let component = ReasonReact.statelessComponent("SelectA");
+let component = ReasonReact.statelessComponent("Select");
 
 type option = {
   value: string,
@@ -34,7 +34,6 @@ let make = (~label, ~data: list(option), ~value, ~onChange, _children) => {
           (ReasonReact.stringToElement(label))
         </InputLabel>
         <Select
-          native=true
           value=(`String(value))
           input=<Input id="platform" />
           onChange=(e => onChange(valueFromEvent(e)))>
