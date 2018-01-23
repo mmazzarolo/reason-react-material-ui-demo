@@ -56,6 +56,9 @@ let make = _children => {
             data=animals
             onChange=(reduce(e => ChangeFavoriteAnimal(e)))
           />
+          <Button onClick=(e => Js.log("CIAO"))>
+            (ReasonReact.stringToElement("Invia"))
+          </Button>
         </form>
       </main>
     </div>
