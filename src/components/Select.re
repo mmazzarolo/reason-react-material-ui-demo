@@ -1,4 +1,4 @@
-[%bs.raw {|require('./TextField.css')|}];
+[%bs.raw {|require('./Select.css')|}];
 
 let valueFromEvent = evt : string => (
                                        evt
@@ -21,25 +21,24 @@ let make = (~label, ~data: list(option), ~value, ~onChange, _children) => {
         Array.of_list(
           List.map(
             x =>
-              <option value=x.value>
+              <MaterialUI.MenuItem value=(`String(x.value))>
                 (ReasonReact.stringToElement(x.label))
-              </option>,
+              </MaterialUI.MenuItem>,
             data
           )
         )
       );
-    MaterialUI.(
-      <FormControl>
-        <InputLabel htmlFor="platform">
-          (ReasonReact.stringToElement(label))
-        </InputLabel>
-        <Select
-          value=(`String(value))
-          input=<Input id="platform" />
-          onChange=(e => onChange(valueFromEvent(e)))>
-          options
-        </Select>
-      </FormControl>
-    );
+    <MaterialUI.FormControl className="Select-root">
+      <MaterialUI.InputLabel _FormControlClasses={"focused": "Select-focused"}>
+        (ReasonReact.stringToElement(label))
+      </MaterialUI.InputLabel>
+      <MaterialUI.Select
+        className="Select-inputwrapper"
+        value=(`String(value))
+        input=<MaterialUI.Input />
+        onChange=(e => onChange(valueFromEvent(e)))>
+        options
+      </MaterialUI.Select>
+    </MaterialUI.FormControl>;
   }
 };

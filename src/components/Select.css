@@ -1,0 +1,18 @@
+.Select-root {
+  display: flex;
+  margin-top: 20px !important;
+  width: 100%;
+  max-width: 640px;
+}
+
+/* 
+  I'm applying here the ink color since the `classes` prop is not avialable
+  on MUI reason binding yet 
+*/
+.Select-inputwrapper:after {
+  background-color: #fe6b8b !important;
+}
+
+.Select-focused {
+  color: #fe6b8b !important;
+}
