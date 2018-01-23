@@ -65,6 +65,13 @@
   display: flex;
   margin: 20px;
   flex-direction: column;
-  width: 100%;
-  max-width: 640px;
+  width: 90%;
+  max-width: 540px;
+}
+
+.App-button-container {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
 }
