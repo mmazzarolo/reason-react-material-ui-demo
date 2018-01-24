@@ -4,6 +4,7 @@
   "author": "Mazzarolo Matteo <mazzarolomatteo@gmail.com>",
   "license": "MIT",
   "private": true,
+  "homepage": "https://mmazzarolo.github.io/reason-react-material-ui-demo",
   "dependencies": {
     "bs-material-ui": "^0.1.16",
     "gh-pages": "^1.1.0",
