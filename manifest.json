@@ -2,6 +2,13 @@
   "short_name": "reason-react-material-ui-demo",
   "name": "reason-react-material-ui-demo",
   "start_url": "./index.html",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
   "display": "standalone",
   "theme_color": "#ffff",
   "background_color": "#FD6C6C"
