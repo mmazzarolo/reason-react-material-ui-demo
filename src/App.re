@@ -57,8 +57,8 @@ let make = _children => {
             onChange=(reduce(e => ChangeFavoriteAnimal(e)))
           />
           <div className="App-button-container">
-            <Button onClick=(e => Js.log("CIAO"))>
-              (ReasonReact.stringToElement("Invia"))
+            <Button onClick=(e => Js.log("SENT"))>
+              (ReasonReact.stringToElement("Send"))
             </Button>
           </div>
         </form>
