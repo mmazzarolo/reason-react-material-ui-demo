@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "reason-react-material-ui-demo",
+  "name": "reason-react-material-ui-demo",
+  "start_url": "./index.html",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +9,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ffff",
+  "background_color": "#FD6C6C"
 }
