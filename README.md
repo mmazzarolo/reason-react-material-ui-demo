@@ -1,10 +1,10 @@
-<h1 align="center">
+<p align="center">
   <img height="500" src="https://github.com/mmazzarolo/reason-react-material-ui-demo/blob/master/.github/iphone-7-screenshot.png">
-  <br>
-  Reason-React & Material UI
- </h1>
+  <p>
 
 # About
+
+[Link to the project](http://mmazzarolo.com/reason-react-material-ui-demo/)
 
 This simple project has been my first Reason-React playground.  
 It features:
