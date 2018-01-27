@@ -9,7 +9,7 @@
 This simple project has been my first Reason-React playground.  
 It features:
 
-* a statefull component (`App.re`)
+* a stateful component (`App.re`)
 * some generic stateless components (`Button.re`, `Select.re`, `TextField.re`)
 * Material UI
 
