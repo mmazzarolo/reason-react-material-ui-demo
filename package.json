@@ -10,7 +10,7 @@
     "gh-pages": "^1.1.0",
     "material-ui": "^1.0.0-beta.19",
     "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react-dom": "16.11.0",
     "reason-scripts": "0.8.0"
   },
   "scripts": {
