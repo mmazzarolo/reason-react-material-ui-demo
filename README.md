@@ -4,8 +4,6 @@
 
 # About
 
-[Link to the project](http://mmazzarolo.com/reason-react-material-ui-demo/)
-
 This simple project has been my first Reason-React playground.  
 It features:
 
